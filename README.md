@@ -4,7 +4,9 @@ A set of Gazebo worlds models and maps for testing Navigation2
 ## How to use the models?
 
 1- Copy the model you want to use in .gazebo/models directory.
+
 2- Set Gazebo model path for the worlds with models directory
+
 3- Gazebo -> Insert -> <World_Model_Name>
 
 All the models come with maps.

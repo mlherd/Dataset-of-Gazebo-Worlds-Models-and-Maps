@@ -12,18 +12,18 @@ A set of Gazebo worlds models and maps for testing Navigation2
 All the models come with maps.
 
 ### Small House
- - export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/small_house/models/
- - gazebo small_house.world
+ - `export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/small_house/models/`
+ - `gazebo small_house.world`
  ![Small_House](https://github.com/mlherd/gazebo_worlds_models_for_testing_navigation/blob/master/worlds/small_house/small_house.jpg?raw=true)
 
 ### Office
- - export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/office/models/
- - gazebo office.world
+ - `export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/office/models/`
+ - `gazebo office.world`
  ![Office](https://github.com/mlherd/gazebo_worlds_models_for_testing_navigation/blob/master/worlds/office/office.jpg?raw=true)
  
 ### Bookstore
- - export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/bookstore/models/
- - gazebo bookstore.world
+ - `export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/bookstore/models/`
+ - `gazebo bookstore.world`
  ![Bookstore](https://github.com/mlherd/gazebo_worlds_models_for_testing_navigation/blob/master/worlds/bookstore/bookstore.jpg?raw=true)
 
 ### Dynamic World

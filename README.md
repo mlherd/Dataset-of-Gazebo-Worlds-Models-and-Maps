@@ -1,7 +1,7 @@
 # gazebo_worlds_models_for_testing_navigation
 A set of Gazebo worlds models and maps for testing Navigation2
 
-## How to use the models?
+## How to use the models
 
 1- Copy the model you want to use in .gazebo/models directory.
 

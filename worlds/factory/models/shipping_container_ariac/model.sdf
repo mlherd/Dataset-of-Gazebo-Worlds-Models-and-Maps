@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="shipping_container_ariac">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision_floor">
+        <pose>-0.18 1.715 0.1 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>3.25 8.61 0.13</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="collision_roof">
+        <pose>-0.18 1.715 2.65 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>3.25 8.61 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!-- The vertical scaffolding bars -->
+      <collision name="vertical_bar_front_0">
+        <pose>-0.885 -2.33 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_1">
+        <pose>-0.885 -1.517 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_2">
+        <pose>-0.885 -0.705 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_3">
+        <pose>-0.885 0.105 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_4">
+        <pose>-0.885 0.92 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_5">
+        <pose>-0.885 1.73 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_6">
+        <pose>-0.885 2.54 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_7">
+        <pose>-0.885 3.35 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_8">
+        <pose>-0.885 4.165 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_9">
+        <pose>-0.885 4.98 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="vertical_bar_front_10">
+        <pose>-0.885 5.78 1.2 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.02 0.015 2.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!-- The green shelving closest to the ground -->
+      <collision name="horizontal_shelf_0">
+        <pose>-1.21 1.72 0.235 0 0.18 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.68 8.1 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="horizontal_shelf_0_front">
+        <pose>-0.931 1.72 0.2 0 0.18 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.047 8.1 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!-- The green shelving above the shelving closest to the ground -->
+      <collision name="horizontal_shelf_1">
+        <pose>-1.21 1.72 0.925 0 0.18 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.68 8.1 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="horizontal_shelf_1_front">
+        <pose>-0.931 1.72 0.89 0 0.18 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.047 8.1 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="horizontal_shelf_2">
+        <pose>-1.21 1.72 1.615 0 0.18 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.68 8.1 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="horizontal_shelf_2_front">
+        <pose>-0.931 1.72 1.58 0 0.18 0</pose>
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.047 8.1 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>1.3 0.7 1.0</scale>
+            <uri>model://shipping_container_ariac/meshes/ShippingContainer_Textured.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

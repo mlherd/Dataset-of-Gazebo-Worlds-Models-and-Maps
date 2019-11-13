@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="disk_part_ariac">
+    <link name="link">
+      <inertial>
+        <pose>0 0 0.01 0 0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.0009</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0009</iyy>
+          <iyz>0</iyz>
+          <izz>0.0012</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision">
+        <max_contacts>10</max_contacts>
+        <pose>0 0 0.01158 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.02316</length>
+            <radius>0.0627</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+
+      <visual name="visual">
+         <geometry>
+           <mesh>
+             <scale>0.4 0.4 0.4</scale>
+             <uri>model://disk_part_ariac/meshes/disk.dae</uri>
+           </mesh>
+         </geometry>
+        <material>
+          <script>
+            <uri>model://arm_part_ariac/materials/scripts</uri>
+            <uri>model://arm_part_ariac/materials/textures</uri>
+            <name>ArmPart/Diffuse</name>
+          </script>
+        </material>
+       </visual>
+
+      <collision name="collision_asymmetric_mark">
+        <pose>0.03 0.03 0.02 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+         <geometry>
+          <cylinder>
+            <length>0.012</length>
+            <radius>0.00392125</radius>
+          </cylinder>
+         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="visual_asymmetric_mark">
+        <pose>0.03 0.03 0.02 0 0 0</pose>
+         <geometry>
+          <cylinder>
+            <length>0.012</length>
+            <radius>0.00392125</radius>
+          </cylinder>
+         </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/DarkGrey</name>
+          </script>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

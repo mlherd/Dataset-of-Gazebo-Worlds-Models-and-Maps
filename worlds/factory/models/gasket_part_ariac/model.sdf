@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="gasket_part_ariac">
+    <link name="link">
+      <inertial>
+        <pose>0 0 0.010173 0 0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.00054</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.002</iyy>
+          <iyz>0</iyz>
+          <izz>0.0025</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision_1">
+        <geometry>
+           <mesh>
+             <scale>0.6 0.6 0.6</scale>
+             <uri>model://gasket_part_ariac/meshes/gasket.dae</uri>
+           </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="visual">
+         <geometry>
+           <mesh>
+             <scale>0.6 0.6 0.6</scale>
+             <uri>model://gasket_part_ariac/meshes/gasket.dae</uri>
+           </mesh>
+         </geometry>
+        <material>
+          <script>
+            <uri>model://arm_part_ariac/materials/scripts</uri>
+            <uri>model://arm_part_ariac/materials/textures</uri>
+            <name>ArmPart/Diffuse</name>
+          </script>
+        </material>
+       </visual>
+
+      <collision name="collision_asymmetric_mark">
+        <pose>0.05 0.0 0.02 0 0 0</pose>
+        <max_contacts>5</max_contacts>
+         <geometry>
+          <box>
+            <size>0.005 0.01 0.01</size>
+          </box>
+         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="visual_asymmetric_mark">
+        <pose>0.05 0.0 0.02 0 0 0</pose>
+         <geometry>
+          <box>
+            <size>0.005 0.01 0.01</size>
+          </box>
+         </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/DarkGrey</name>
+          </script>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

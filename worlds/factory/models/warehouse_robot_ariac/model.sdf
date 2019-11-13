@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="warehouse_robot">
+    <static>false</static>
+    <link name="link">
+      <inertial>
+        <pose>0 0 0.15 0 0 0</pose>
+        <mass>50.0</mass>
+        <inertia>
+          <ixx>4.525499333333333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.4504741933333334</iyy>
+          <iyz>0</iyz>
+          <izz>5.6426401933333326</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://warehouse_robot/meshes/robot.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision_base">
+        <max_contacts>10</max_contacts>
+        <pose>0 0 0.20437 0 0 0</pose>
+          <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          </surface>
+        <geometry>
+          <box>
+            <size>0.55508 1.0228 0.40874</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="collision_bumper">
+        <max_contacts>10</max_contacts>
+        <pose>0 0 0.062205 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.67266 1.17126 0.12441</size>
+          </box>
+        </geometry>
+          <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          </surface>
+      </collision>
+      <collision name="collision_column_large">
+        <pose>0 -0.27539 0.43738 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.08652</radius>
+            <length>0.87476</length>
+          </cylinder>
+        </geometry>
+          <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          </surface>
+      </collision>
+      <collision name="collision_column_small">
+        <pose>0 -0.27539 0.70424 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.04261</radius>
+            <length>1.40848</length>
+          </cylinder>
+        </geometry>
+          <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>

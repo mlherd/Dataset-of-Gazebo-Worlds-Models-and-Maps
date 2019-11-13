@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <model name="conveyor_belt">
+      <!-- Fixed frame that can be used to refer to the belt's global pose -->
+      <model name="conveyor_belt_fixed">
+        <static>true</static>
+        <pose>1.15 4.2 0.35 0 0 -1.57079</pose>
+        <link name="link">
+          <pose>0 0 0 0 0 0</pose>
+        </link>
+      </model>
+
+      <!-- Moving component that extends and resets a prismatic joint -->
+      <model name="conveyor_belt_moving">
+        <allow_auto_disable>0</allow_auto_disable>
+        <static>false</static>
+        <pose>1.15 -4.12 0.35 0 0 -1.57079</pose>
+        <link name="belt">
+          <pose>-5 0 0 0 0 0</pose>
+          <inertial>
+            <inertia>
+              <ixx>3.8185</ixx>
+              <ixy>0</ixy>
+              <ixz>0</ixz>
+              <iyy>1781.5</iyy>
+              <iyz>0</iyz>
+              <izz>1784.72</izz>
+            </inertia>
+            <mass>100</mass>
+          </inertial>
+          <!--Uncomment for debugging -->
+          <!--
+          <visual name="belt_visual">
+            <geometry>
+              <box>
+                <size>14.62206 0.65461 0.18862</size>
+              </box>
+            </geometry>
+          </visual>
+          -->
+          <collision name="belt_collision">
+            <geometry>
+              <box>
+                <size>14.62206 0.65461 0.18862</size>
+              </box>
+            </geometry>
+            <surface>
+              <friction>
+                <ode>
+                  <mu>1.0</mu>
+                  <mu2>1.0</mu2>
+                </ode>
+                <torsional>
+                  <coefficient>1000.0</coefficient>
+                  <patch_radius>0.1</patch_radius>
+                </torsional>
+              </friction>
+            </surface>
+          </collision>
+        </link>
+      </model>
+
+      <joint name="belt_joint" type="prismatic">
+        <parent>conveyor_belt_fixed::link</parent>
+        <child>conveyor_belt_moving::belt</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.0</upper>
+          </limit>
+        </axis>
+      </joint>
+
+      <plugin name="conveyor_belt_plugin" filename="libROSConveyorBeltPlugin.so">
+        <robot_namespace>/ariac</robot_namespace>
+        <enable_topic>/ariac/conveyor_enable</enable_topic>
+        <population_rate_modifier_topic>/ariac/population/rate_modifier</population_rate_modifier_topic>
+        <link>conveyor_belt::conveyor_belt_moving::belt</link>
+        <power>0</power>
+        <update_rate>10</update_rate>
+      </plugin>
+    </model>
+</sdf>

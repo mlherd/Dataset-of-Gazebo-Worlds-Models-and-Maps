@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="drone_with_box">
+    <include>
+      <name>drone</name>
+      <uri>model://drone_ariac</uri>
+    </include>
+    <static>true</static>
+    <link name="box_link">
+      <visual name="box_visual">
+        <pose>0 0 -0.13 0 0 1.5707</pose>
+        <geometry>
+          <mesh>
+            <scale>1.1 1.8 0.25</scale>
+            <uri>model://closed_box_ariac/meshes/closed_box.obj</uri>
+          </mesh>
+        </geometry>
+        <plugin name="toggle" filename="libToggleVisualPlugin.so">
+          <initially_visible>false</initially_visible>
+          <topic>~/drone_box_visual_toggle</topic>
+        </plugin>
+      </visual>
+    </link>
+  </model>
+</sdf>

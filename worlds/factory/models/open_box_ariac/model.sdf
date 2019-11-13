@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="open_box">
+    <static>false</static>
+    <self_collide>0</self_collide>
+    <link name="box_base">
+      <gravity>true</gravity>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.0408</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.02084</iyy>
+          <iyz>0</iyz>
+          <izz>0.0616</izz>
+        </inertia>
+      </inertial>
+
+      <sensor name='shipping_box_contact' type='contact'>
+        <update_rate>1</update_rate>
+        <contact>
+          <collision>box_base</collision>
+        </contact>
+      </sensor>
+
+      <collision name="box_base">
+        <pose>0.0 0 0.0015 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.49 0.69 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="box_bottom">
+        <pose>0.0 0 0.0005 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.49 0.69 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="tray_collision1">
+        <pose>0.25 0 0.0127 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.001 0.7 0.0254</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="tray_collision2">
+        <pose>-0.25 0 0.0127 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.001 0.7 0.0254</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="tray_collision3">
+        <pose>0 0.35 0.0127 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.5 0.001 0.0254</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="tray_collision4">
+        <pose>0 -0.35 0.0127 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.5 0.001 0.0254</size>
+          </box>
+        </geometry>
+      </collision>
+
+<!--
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1.1 1.8 0.25</scale>
+            <uri>model://open_box_ariac/meshes/open_box.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+-->
+      <visual name="open_box">
+        <geometry>
+          <mesh>
+            <scale>1.1 1.8 0.25</scale>
+            <uri>model://open_box_ariac/meshes/open_box.obj</uri>
+          </mesh>
+        </geometry>
+        <plugin name="toggle" filename="libToggleVisualPlugin.so">
+          <initially_visible>true</initially_visible>
+          <topic>~/shipping_box_visual_toggle</topic>
+        </plugin>
+      </visual>
+
+      <visual name="closed_box">
+        <geometry>
+          <mesh>
+            <scale>1.1 1.8 0.25</scale>
+            <uri>model://closed_box_ariac/meshes/closed_box.obj</uri>
+          </mesh>
+        </geometry>
+        <plugin name="toggle" filename="libToggleVisualPlugin.so">
+          <initially_visible>false</initially_visible>
+          <topic>~/shipping_box_visual_toggle</topic>
+        </plugin>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

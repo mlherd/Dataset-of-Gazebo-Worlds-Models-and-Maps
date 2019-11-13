@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="workcell_bin">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://workcell_bin/meshes/bin.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="center_collision">
+        <pose>0 0 0.45 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.6 0.6 0.55</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="center_visual">
+        <pose>0 0 0.45 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.6 0.6 0.55</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.48627451 0.819607843 1 1</ambient>
+          <diffuse>0.48627451 0.819607843 1 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="base">
+        <pose>0 0 0.100245 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.66836 0.66836 0.20049</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="left_wall">
+        <pose>-0.319 0 0.395445 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.003 0.63803 0.79089</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="right_wall">
+        <pose>0.319 0 0.395445 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.003 0.63803 0.79089</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="front_left_wall">
+        <pose>-0.25331 0.31899 0.395445 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.13437 0.003 0.79089</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="front_mid_wall">
+        <pose>0 0.31899 0.252845 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.37226 0.003 0.50569</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="front_right_wall">
+        <pose>0.25331 0.31899 0.395445 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.13437 0.003 0.79089</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="back_left_wall">
+        <pose>-0.25331 -0.31899 0.395445 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.13437 0.003 0.79089</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="back_mid_wall">
+        <pose>0 -0.31899 0.252845 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.37226 0.003 0.50569</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="back_right_wall">
+        <pose>0.25331 -0.31899 0.395445 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.13437 0.003 0.79089</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="plastic_cup">
+    <link name="link">
+      <pose>0 0 0.065 0 0 0</pose>
+      <inertial>
+        <mass>0.0599</mass>
+        <inertia>
+          <ixx>0.0003028961527030333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0003028961527030333</iyy>
+          <iyz>0</iyz>
+          <izz>3.2876352372798436e-05</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://plastic_cup/meshes/plastic_cup.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <!-- typical acrylic plastic material properties -->
+            <poissons_ratio>0.35</poissons_ratio>
+            <elastic_modulus>3.102640776e+09</elastic_modulus>
+            <ode>
+              <kp>100000</kp>
+              <kd>100</kd>
+              <max_vel>100.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <torsional>
+              <coefficient>1.0</coefficient>
+              <use_patch_radius>0</use_patch_radius>
+              <surface_radius>0.01</surface_radius>
+            </torsional>
+          </friction>
+        </surface>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://plastic_cup/meshes/plastic_cup.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/GreyTransparent</name>
+          </script>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

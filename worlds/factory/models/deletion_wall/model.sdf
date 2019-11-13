@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="deletion_wall">
+    <!-- add a link that is sensing collisions -->
+    <static>true</static>
+    <link name="sensing_link">
+      <gravity>false</gravity>
+      <sensor name='object_disposal_contact' type='contact'>
+        <update_rate>10</update_rate>
+        <contact>
+           <collision>collision</collision>
+        </contact>
+      </sensor>
+      <collision name="collision">
+        <max_contacts>10</max_contacts>
+        <geometry>
+          <box>
+            <size>0.1 1 1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.1 1 1</size>
+          </box>
+        </geometry>
+        <cast_shadows>0</cast_shadows>
+        <!-- make invisible -->
+        <transparency>100</transparency>
+      </visual>
+    </link>
+
+    <!-- plugin for processing contact sensor output -->
+    <plugin name="object_disposal_plugin" filename="libObjectDisposalPlugin.so">
+      <contact_sensor_name>object_disposal_contact</contact_sensor_name>
+      <contact_side_normal>1 0 0</contact_side_normal>
+      <disposal_pose>30 30 0 0 0 0</disposal_pose>
+      <update_rate>5</update_rate>
+    </plugin>
+
+  </model>
+</sdf>

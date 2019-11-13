@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="logical_camera">
+    <plugin name="ros_logical_camera" filename="libROSLogicalCameraPlugin.so">
+      <robotNamespace>ariac</robotNamespace>
+      <position_noise>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.001</stddev>
+        </noise>
+      </position_noise>
+      <orientation_noise>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </orientation_noise>
+    </plugin>
+    <link name="link">
+      <gravity>false</gravity>
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.000166667</ixx>
+          <iyy>0.000166667</iyy>
+          <izz>0.000166667</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision">
+        <pose>0 0.02 0 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://logical_camera_ariac/meshes/camera.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <pose>0 0.02 0 0 0 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <uri>model://logical_camera_ariac/meshes/camera.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <sensor name="logical_camera" type="logical_camera">
+
+        <logical_camera>
+          <near>0.2</near>
+          <far>0.75</far>
+          <horizontal_fov>1.1</horizontal_fov>
+          <aspect_ratio>1.5</aspect_ratio>
+        </logical_camera>
+
+        <visualize>true</visualize>
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+      </sensor>
+    </link>
+  </model>
+</sdf>

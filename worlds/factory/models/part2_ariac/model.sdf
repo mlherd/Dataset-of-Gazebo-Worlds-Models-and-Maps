@@ -1,0 +1,211 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='part2'>
+    <link name='link'>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.166667</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.166667</iyy>
+          <iyz>0</iyz>
+          <izz>0.166667</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <polyline>
+            <height>0.01</height>
+            <point>-0.0261056 -0.00687487</point>
+            <point>-0.01905 -0.00818519</point>
+            <point>-0.01906 -0.00797497</point>
+            <point>-0.0190374 -0.00739377</point>
+            <point>-0.0189036 -0.00651579</point>
+            <point>-0.0185797 -0.00541522</point>
+            <point>-0.017987 -0.00416627</point>
+            <point>-0.0170468 -0.00284311</point>
+            <point>-0.0156803 -0.00151996</point>
+            <point>-0.0138088 -0.000271003</point>
+            <point>-0.0113535 0.000829563</point>
+            <point>-0.00823569 0.00170754</point>
+            <point>-0.00437665 0.00228874</point>
+            <point>0.000302388 0.00249896</point>
+            <point>0.00251173 0.00216036</point>
+            <point>0.00444502 0.00159353</point>
+            <point>0.00614428 0.000807993</point>
+            <point>0.00765154 -0.000186751</point>
+            <point>0.00900881 -0.00138119</point>
+            <point>0.0102581 -0.00276583</point>
+            <point>0.0114415 -0.00433114</point>
+            <point>0.012601 -0.00606763</point>
+            <point>0.0137787 -0.00796579</point>
+            <point>0.0150164 -0.0100161</point>
+            <point>0.0163564 -0.0122091</point>
+            <point>0.0178405 -0.0145352</point>
+            <point>0.0261056 -0.0106042</point>
+            <point>0.0218723 0.00259976</point>
+            <point>0.0190875 0.00520005</point>
+            <point>0.0159662 0.00729321</point>
+            <point>0.0125866 0.00889826</point>
+            <point>0.00902696 0.0100342</point>
+            <point>0.00536572 0.01072</point>
+            <point>0.00168115 0.0109748</point>
+            <point>-0.00194842 0.0108174</point>
+            <point>-0.00544469 0.010267</point>
+            <point>-0.00872931 0.00934255</point>
+            <point>-0.011724 0.00806303</point>
+            <point>-0.0143504 0.00644745</point>
+            <point>-0.0165302 0.00451484</point>
+            <point>-0.0169326 0.00518302</point>
+            <point>-0.0173669 0.00584152</point>
+            <point>-0.0178205 0.00649485</point>
+            <point>-0.0182805 0.00714752</point>
+            <point>-0.0187344 0.00780406</point>
+            <point>-0.0191694 0.00846899</point>
+            <point>-0.0195728 0.00914681</point>
+            <point>-0.019932 0.00984206</point>
+            <point>-0.0202343 0.0105592</point>
+            <point>-0.020467 0.0113029</point>
+            <point>-0.0206173 0.0120775</point>
+            <point>-0.0206727 0.0128876</point>
+            <point>-0.0206313 0.0132498</point>
+            <point>-0.0206321 0.0135684</point>
+            <point>-0.0206728 0.0138429</point>
+            <point>-0.0207514 0.0140728</point>
+            <point>-0.0208658 0.0142575</point>
+            <point>-0.0210139 0.0143965</point>
+            <point>-0.0211936 0.0144892</point>
+            <point>-0.0214027 0.0145352</point>
+            <point>-0.0216392 0.0145339</point>
+            <point>-0.0219009 0.0144848</point>
+            <point>-0.0221858 0.0143872</point>
+            <point>-0.0224917 0.0142409</point>
+            <point>-0.0251985 0.0134855</point>
+            <point>-0.0250394 0.0123395</point>
+            <point>-0.0248864 0.0111904</point>
+            <point>-0.024734 0.0100399</point>
+            <point>-0.0245766 0.0088894</point>
+            <point>-0.0244087 0.00774059</point>
+            <point>-0.0242249 0.00659498</point>
+            <point>-0.0240196 0.00545413</point>
+            <point>-0.0237874 0.00431959</point>
+            <point>-0.0235228 0.00319292</point>
+            <point>-0.0232203 0.00207567</point>
+            <point>-0.0228743 0.000969409</point>
+            <point>-0.0224794 -0.000124312</point>
+            <point>-0.0225795 -0.000565419</point>
+            <point>-0.0227174 -0.000990723</point>
+            <point>-0.0228878 -0.0014026</point>
+            <point>-0.0230847 -0.00180341</point>
+            <point>-0.0233027 -0.00219554</point>
+            <point>-0.0235361 -0.00258135</point>
+            <point>-0.0237793 -0.00296323</point>
+            <point>-0.0240265 -0.00334353</point>
+            <point>-0.0242722 -0.00372464</point>
+            <point>-0.0245107 -0.00410892</point>
+            <point>-0.0247365 -0.00449875</point>
+            <point>-0.0249437 -0.0048965</point>
+            <point>-0.0261056 -0.00687487</point>
+          </polyline>
+          <polyline>
+            <height>0.01</height>
+            <point>0.0197556 -0.00553338</point>
+            <point>0.0208777 -0.00591368</point>
+            <point>0.0215851 -0.00762141</point>
+            <point>0.0208777 -0.00884399</point>
+            <point>0.0199982 -0.00920829</point>
+            <point>0.0182947 -0.00850654</point>
+            <point>0.0179761 -0.00688824</point>
+            <point>0.0197556 -0.00553338</point>
+          </polyline>
+          <polyline>
+            <height>0.01</height>
+            <point>-0.0226282 0.0128536</point>
+            <point>-0.0217321 0.0124133</point>
+            <point>-0.0214962 0.0117216</point>
+            <point>-0.0216128 0.0112213</point>
+            <point>-0.0220002 0.0107798</point>
+            <point>-0.022703 0.0105921</point>
+            <point>-0.0233741 0.0125732</point>
+            <point>-0.0228501 0.0128316</point>
+            <point>-0.022777 0.0128438</point>
+            <point>-0.022703 0.0128511</point>
+            <point>-0.0226282 0.0128536</point>
+          </polyline>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0.005 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.06 0.015 0.01</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+      </collision>
+    </link>
+    <static>0</static>
+    <allow_auto_disable>0</allow_auto_disable>
+  </model>
+</sdf>

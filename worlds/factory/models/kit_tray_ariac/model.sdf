@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="kit_tray">
+    <static>false</static>
+    <link name="tray">
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.0408</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.02084</iyy>
+          <iyz>0</iyz>
+          <izz>0.0616</izz>
+        </inertia>
+      </inertial>
+      <sensor name='kit_tray_contact' type='contact'>
+        <update_rate>1</update_rate>
+        <contact>
+          <collision>tray_collision</collision>
+        </contact>
+      </sensor>
+      <gravity>false</gravity>
+      <collision name="tray_collision">
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.5 0.7 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="tray_collision1">
+        <pose>0.25 0 0.0127 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.001 0.7 0.0254</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="tray_visual1">
+        <pose>0.25 0 0.0127 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.001 0.7 0.0254</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.48627451 0.819607843 1 1</ambient>
+          <diffuse>0.48627451 0.819607843 1 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="tray_collision2">
+        <pose>-0.25 0 0.0127 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.001 0.7 0.0254</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="tray_visual2">
+        <pose>-0.25 0 0.0127 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.001 0.7 0.0254</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.48627451 0.819607843 1 1</ambient>
+          <diffuse>0.48627451 0.819607843 1 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="tray_collision3">
+        <pose>0 0.35 0.0127 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.5 0.001 0.0254</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="tray_visual3">
+        <pose>0 0.35 0.0127 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.5 0.001 0.0254</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.48627451 0.819607843 1 1</ambient>
+          <diffuse>0.48627451 0.819607843 1 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="tray_collision4">
+        <pose>0 -0.35 0.0127 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+        <geometry>
+          <box>
+            <size>0.5 0.001 0.0254</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="tray_visual4">
+        <pose>0 -0.35 0.0127 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.5 0.001 0.0254</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.48627451 0.819607843 1 1</ambient>
+          <diffuse>0.48627451 0.819607843 1 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.7 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.48627451 0.819607843 1 1</ambient>
+          <diffuse>0.48627451 0.819607843 1 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <allow_auto_disable>0</allow_auto_disable>
+  </model>
+</sdf>

@@ -1,0 +1,163 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="pulley_part_ariac">
+    <link name="link">
+      <inertial>
+        <pose>0 0 0.035145 0 0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.00191581703</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00191581703</iyy>
+          <iyz>0</iyz>
+          <izz>0.0034199104</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="collision_asymmetric_mark_top">
+        <pose>0 -0.111 0.0705 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+         <geometry>
+          <cylinder>
+            <length>0.012</length>
+            <radius>0.00392125</radius>
+          </cylinder>
+         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name="visual_asymmetric_mark_top">
+        <pose>0 -0.111 0.0705 0 0 0</pose>
+         <geometry>
+          <cylinder>
+            <length>0.012</length>
+            <radius>0.00392125</radius>
+          </cylinder>
+         </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/DarkGrey</name>
+          </script>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="collision_asymmetric_mark_bottom">
+        <pose>0 0.111 -0.0005 0 0 0</pose>
+        <max_contacts>10</max_contacts>
+         <geometry>
+          <cylinder>
+            <length>0.012</length>
+            <radius>0.00392125</radius>
+          </cylinder>
+         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name="visual_asymmetric_mark_bottom">
+        <pose>0 0.111 -0.0005 0 0 0</pose>
+         <geometry>
+          <cylinder>
+            <length>0.012</length>
+            <radius>0.00392125</radius>
+          </cylinder>
+         </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/DarkGrey</name>
+          </script>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <!-- Top collision -->
+      <collision name="collision_top">
+        <pose>0 0 0.065 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.1125</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <!-- Botton collision -->
+      <collision name="collision_bottom">
+        <pose>0 0 0.005 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.01</length>
+            <radius>0.1125</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <!-- Core collision -->
+      <collision name="collision_core">
+        <pose>0 0 0.035 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.07</length>
+            <radius>0.1</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://pulley_part_ariac/meshes/pulley.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://arm_part_ariac/materials/scripts</uri>
+            <uri>model://arm_part_ariac/materials/textures</uri>
+            <name>ArmPart/Diffuse</name>
+          </script>
+        </material>
+       </visual>
+    </link>
+  </model>
+</sdf>

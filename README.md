@@ -9,7 +9,7 @@ A set of Gazebo worlds models and maps for testing Navigation2
 
 3- Gazebo -> Insert -> <World_Model_Name>
 
-All the models come with maps.
+Most models come with maps.
 
 ### Small House
  - `export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/small_house/models/`

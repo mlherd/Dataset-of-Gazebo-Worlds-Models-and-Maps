@@ -26,6 +26,11 @@ Most models come with maps.
  - `gazebo bookstore.world`
  ![Bookstore](https://github.com/mlherd/gazebo_worlds_models_for_testing_navigation/blob/master/worlds/bookstore/bookstore.jpg?raw=true)
 
+### Factory
+ - `export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/factory/models/`
+ - `gazebo factory.model`
+ ![Factory](https://github.com/mlherd/gazebo_worlds_models_maps_for_testing_navigation/blob/master/worlds/factory/factory.jpg?raw=true)
+
 ### Dynamic World
  ![Dynamic_World](https://github.com/mlherd/gazebo_worlds_models_for_testing_navigation/blob/master/worlds/dynamic_world/dynamic_room.jpg?raw=true)
  

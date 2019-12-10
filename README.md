@@ -40,3 +40,6 @@ Most models come with maps.
 ### Turtlebot 3 World
 ![Turtlebot 3 World](https://github.com/mlherd/gazebo_worlds_models_for_testing_navigation/blob/master/worlds/turtlebot3_world/tb_world.jpg?raw=true)
 
+### 10x10 Rooms with Walls
+![10x10 rooms](https://raw.githubusercontent.com/mlherd/gazebo_worlds_models_maps_for_testing_navigation/master/worlds/room_with_walls_1/simple_rooms.png)
+

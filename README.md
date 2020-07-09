@@ -1,6 +1,6 @@
 # Dataset-of-Gazebo-Worlds-Models-and-Maps
-A set of Gazebo worlds models and maps that I use for testing Navigation2
-These models are tested using Gazebo 9 and Gazebo 11.
+- A set of Gazebo worlds models and maps that I use for testing Navigation2
+- These models are tested using Gazebo 9 and Gazebo 11.
 
 ## How to use the models
 1-

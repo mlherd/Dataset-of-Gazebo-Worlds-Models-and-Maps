@@ -27,7 +27,8 @@ Most models come with maps.
  ![Bookstore](https://github.com/mlherd/gazebo_worlds_models_for_testing_navigation/blob/master/worlds/bookstore/bookstore.jpg?raw=true)
 
 ### AWS Hospital
- - `export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/bookstore/models/`
+ - unzip the models_part# into a dicrectory called models
+ - `export GAZEBO_MODEL_PATH=/home/<user_name>/.gazebo/models/hospital/models/`
  - `gazebo hospital.world`
  - `gazebo hospital_two_floors.world`
  ![Hospital](https://github.com/mlherd/gazebo_worlds_models_maps_for_testing_navigation/blob/master/worlds/hospital/hospital.png?raw=true)
@@ -48,6 +49,9 @@ Most models come with maps.
 ![Turtlebot 3 World](https://github.com/mlherd/gazebo_worlds_models_for_testing_navigation/blob/master/worlds/turtlebot3_world/tb_world.jpg?raw=true)
 
 ### Experiment Rooms
+  - `export GAZEBO_MODEL_PATH=/home/<user_name>/experiment_rooms/models/`
+  - `cd experiment_rooms/worlds/room1`
+  - `gazebo world_dynamic.model`
 ![10x10 rooms](https://github.com/mlherd/gazebo_worlds_models_maps_for_testing_navigation/blob/master/worlds/experiment_rooms/experiment_rooms.png?raw=true)
 
 ### 10x10 Rooms with Walls

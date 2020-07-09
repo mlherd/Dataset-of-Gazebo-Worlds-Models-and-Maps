@@ -39,6 +39,9 @@ Most models come with maps.
  - `gazebo hospital.world`
  - `gazebo hospital_two_floors.world`
  ![Hospital](https://github.com/mlherd/gazebo_worlds_models_maps_for_testing_navigation/blob/master/worlds/hospital/hospital.png?raw=true)
+ 
+ #### Hospital with Two Floors
+ 
  ![Hospital_Two_Floors](https://github.com/mlherd/gazebo_worlds_models_maps_for_testing_navigation/blob/master/worlds/hospital/two_floor.png?raw=true)
 
 ### Custom Factory
